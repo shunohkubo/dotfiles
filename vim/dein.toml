@@ -1,0 +1,121 @@
+[[plugins]]
+repo   = 'Shougo/dein.vim'
+
+[[plugins]]
+repo   = 'Shougo/neosnippet.vim'
+
+[[plugins]]
+repo   = 'vim-jp/vimdoc-ja'
+
+[[plugins]]
+repo   = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
+repo   = 'Shougo/vimshell'
+
+[[plugins]]
+repo   = 'Shougo/denite.nvim'
+
+[[plugins]]
+repo   = 'w0ng/vim-hybrid'
+
+[[plugins]]
+repo   = 'scrooloose/nerdtree'
+
+[[plugins]]
+repo   = 'Xuyuanp/nerdtree-git-plugin'
+
+[[plugins]]
+repo   = 'editorconfig/editorconfig-vim'
+
+[[plugins]]
+repo = 'w0rp/ale'
+hook_source = '''
+  let g:ale_lint_on_text_changed = 0
+  let g:ale_lint_on_enter = 0
+  let g:ale_lint_on_save = 1
+  let g:ale_linters = {'go': ['gometalinter', 'gofmt']}
+  let g:ale_fixers = {'javascript': ['prettier']}
+  let g:ale_fix_on_save = 1
+  let g:ale_javascript_prettier_use_local_config = 1
+  let g:ale_go_gometalinter_options = '--disable-all --enable=vet --enable=gotype'
+'''
+
+[[plugins]]
+repo = 'cohama/lexima.vim'
+hook_source = '''
+  let g:lexima_enable_basic_rules = 1
+'''
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+
+[[plugins]]
+repo = 'alvan/vim-closetag'
+
+# support writing user-defined text objects
+[[plugins]]
+repo = 'kana/vim-textobj-user'
+
+# brackets and quotations
+[[plugins]]
+repo = 'osyo-manga/vim-textobj-multiblock'
+hook_add = '''
+  omap ab <Plug>(textobj-multiblock-a)
+  vmap ab <Plug>(textobj-multiblock-a)
+  omap ib <Plug>(textobj-multiblock-i)
+  vmap ib <Plug>(textobj-multiblock-i)
+'''
+
+[[plugins]]
+repo = 'vim-scripts/nginx.vim'
+
+[[plugins]]
+repo = 'Shougo/neoyank.vim'
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
+repo = 'kana/vim-operator-user'
+
+[[plugins]]
+repo = 'fohte/vim-operator-case'
+hook_add = '''
+  map gcc <Plug>(operator-case-camelize)
+  map gcp <Plug>(operator-case-pascalize)
+  map gcs <Plug>(operator-case-snakenize)
+  map gcC <Plug>(operator-case-constantize)
+'''
+
+[[plugins]]
+repo = 'tpope/vim-rails'
+
+[[plugins]]
+repo = 'kchmck/vim-coffee-script'
+
+[[plugins]]
+repo = 'brooth/far.vim'
+
+[[plugins]]
+repo = 'rhysd/vim-operator-surround'
+hook_add = '''
+  map <silent> sa <Plug>(operator-surround-append)
+  map <silent> sd <Plug>(operator-surround-delete)a
+  map <silent> sr <Plug>(operator-surround-replace)a
+'''
+
+[[plugins]]
+repo = 'chemzqm/vim-easygit'
+
+[[plugins]]
+repo = 'chemzqm/denite-git'
+
+# comments
+[[plugins]]
+repo = 'tyru/caw.vim'
+hook_add = '''
+  let g:caw_operator_keymappings = 1
+  nmap <silent> - <Plug>(caw:hatpos:toggle:operator)
+  xmap <silent> - <Plug>(caw:hatpos:toggle:operator)
+'''
