@@ -51,7 +51,6 @@ set noundofile
 set iskeyword+=-
 
 set splitright
-set splitbelow
 
 "dein Scripts-----------------------------
 if &compatible
