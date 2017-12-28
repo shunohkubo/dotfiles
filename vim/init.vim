@@ -138,10 +138,10 @@ map <silent> <Leader>st :<C-u>Denite gitstatus<CR>
 
 nmap <leader>n :NERDTreeToggle<cr>
 nmap <leader>m :NERDTreeFind<cr>
+if !argc()
+  autocmd vimenter * NERDTree
+endif
 let g:NERDTreeShowHidden=1
-
-let g:deoplete#enable_at_startup = 1
-set completeopt+=noinsert
 
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.html.erb'
 let g:closetag_xhtml_filenames = '*.xhtml,*.jsx'
@@ -164,3 +164,13 @@ function! s:check_back_space() abort "{{{
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~ '\s'
 endfunction"}}}
+
+nnoremap <F5> :<C-u>vsplit ~/.config/nvim/init.vim<CR>
+nnoremap <F6> :<C-u>source ~/.config/nvim/init.vim<CR>
+
+set undofile
+set undodir=~/.vim/undo
+
+nnoremap <C-h>  :<C-u>help<Space>
+
+set inccommand=split

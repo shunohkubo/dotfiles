@@ -48,9 +48,6 @@ hook_source = '''
 '''
 
 [[plugins]]
-repo = 'Shougo/deoplete.nvim'
-
-[[plugins]]
 repo = 'alvan/vim-closetag'
 
 # support writing user-defined text objects
@@ -87,12 +84,6 @@ hook_add = '''
   map gcs <Plug>(operator-case-snakenize)
   map gcC <Plug>(operator-case-constantize)
 '''
-
-[[plugins]]
-repo = 'tpope/vim-rails'
-
-[[plugins]]
-repo = 'kchmck/vim-coffee-script'
 
 [[plugins]]
 repo = 'brooth/far.vim'
@@ -136,3 +127,4 @@ hook_add = '''
 
   let g:EasyMotion_startofline = 0
 '''
+
